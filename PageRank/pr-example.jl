@@ -4,12 +4,15 @@ using SparseArrays
 using Plots
 include("graphs-nopackages.jl")
 
-filename = "data/Karate.mat"
-# filename = "data/BuckGraph.mat"
+
+filename = "PageRank/data/Karate.mat"
 M = matread(filename)
 A = M["A"]
 A = sparse(A)
 xy = M["xy"]
+
+
+
 
 f = display_graph(A,xy)
 n = size(A,1)
